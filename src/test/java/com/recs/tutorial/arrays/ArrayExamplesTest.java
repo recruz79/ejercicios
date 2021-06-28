@@ -1,21 +1,18 @@
 package com.recs.tutorial.arrays;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Created by recruz on 09/01/2017.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class ArrayExamplesTest {
 
     ArrayExamples arrayExamples;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         arrayExamples = new ArrayExamples();
     }

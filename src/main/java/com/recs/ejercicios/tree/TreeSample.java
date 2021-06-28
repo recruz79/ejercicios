@@ -1,4 +1,4 @@
-package com.recs.algoritmos.tree;
+package com.recs.ejercicios.tree;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package com.recs.algoritmos.linkedlist;
+package com.recs.ejercicios.linkedlist;
 
 
 public class LinkedListExample {

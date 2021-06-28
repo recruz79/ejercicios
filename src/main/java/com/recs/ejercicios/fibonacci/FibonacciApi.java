@@ -1,4 +1,4 @@
-package com.recs.algoritmos.fibonacci;
+package com.recs.ejercicios.fibonacci;
 
 import java.util.List;
 

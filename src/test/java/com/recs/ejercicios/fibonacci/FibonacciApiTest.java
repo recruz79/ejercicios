@@ -1,19 +1,17 @@
-package com.recs.algoritmos.fibonacci;
+package com.recs.ejercicios.fibonacci;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class FibonacciApiTest {
 
@@ -39,19 +37,16 @@ public class FibonacciApiTest {
 
 	public FibonacciApiTest() {}
 
-	@BeforeClass
+	@BeforeTestClass
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {}
 
 	@Test
 	public void shouldGenerateSequence() {
-		// GIVEN
-		// WHEN
 		List<Long> sequence = fibonacciApi.generateSequence(FibonacciApiTest.STARTING_TERM, FibonacciApiTest.TERMS);
-		// THEN
 		assertThat(sequence.containsAll(this.expectedSequence)).isTrue();
         assertThat(this.expectedSequence.containsAll(sequence)).isTrue();
 	}

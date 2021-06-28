@@ -1,4 +1,4 @@
-package com.recs.algoritmos.postfix;
+package com.recs.ejercicios.postfix;
 
 // CSE 143, Summer 2012
 // This program evaluates "postfix" expressions (also called "Reverse Polish

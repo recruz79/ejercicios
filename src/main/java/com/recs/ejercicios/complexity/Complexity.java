@@ -1,4 +1,4 @@
-package com.recs.algoritmos.complexity;
+package com.recs.ejercicios.complexity;
 
 /**
  * Created by recruz on 22/11/2016.

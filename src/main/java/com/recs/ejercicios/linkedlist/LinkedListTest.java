@@ -1,4 +1,4 @@
-package com.recs.algoritmos.linkedlist;
+package com.recs.ejercicios.linkedlist;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
