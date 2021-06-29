@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by recruz on 14/11/2016.
- */
 @Component
 class FibonacciApiImpl implements FibonacciApi{
 

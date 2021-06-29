@@ -4,9 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-/**
- * Created by recruz on 09/01/2017.
- */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class ArrayExamplesTest {
 
@@ -45,9 +42,9 @@ public class ArrayExamplesTest {
 
     @Test
     public void givenMatrixWhenReadedThenMatrixSumIsReturned() {
-        double[][] grades = new double [3][4] ;
-        for(int rowIndex = 0; rowIndex < 3; rowIndex++) {
-            for(int columnIndex = 0; columnIndex < 4; columnIndex++) {
+        double[][] grades = new double[3][4];
+        for (int rowIndex = 0; rowIndex < 3; rowIndex++) {
+            for (int columnIndex = 0; columnIndex < 4; columnIndex++) {
                 grades[rowIndex][columnIndex] = columnIndex;
             }
         }
@@ -57,8 +54,8 @@ public class ArrayExamplesTest {
 
     @Test
     public void givenArrayWhenReadThenCopyIsCreated() {
-        char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
-                'i', 'n', 'a', 't', 'e', 'd' };
+        char[] copyFrom = {'d', 'e', 'c', 'a', 'f', 'f', 'e',
+                'i', 'n', 'a', 't', 'e', 'd'};
         arrayExamples.arrayCopy(copyFrom);
     }
 

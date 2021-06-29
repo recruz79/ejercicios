@@ -2,12 +2,9 @@ package com.recs.ejercicios.collections;
 
 import java.util.*;
 
-/**
- * Created by recruz on 09/01/2017.
- */
-public class CollectionsChallenge {
+public class CollectionsTutorial {
 
-    public void mergeSortedArrays(Integer[] arrayOne, Integer[] arrayTwo) {
+    public void listMergedArrays(Integer[] arrayOne, Integer[] arrayTwo) {
         System.out.println("Array a : " + Arrays.toString(arrayOne));
         System.out.println("Array b : " + Arrays.toString(arrayTwo));
 
@@ -58,7 +55,7 @@ public class CollectionsChallenge {
         System.out.println("result of difference is : " + result);
     }
 
-    private void mapHandling() {
+    private void listMapHandling() {
         Map<Integer, String> map = new HashMap();
 
         map.put(1, "Pedro");
@@ -75,7 +72,7 @@ public class CollectionsChallenge {
         }
     }
 
-    private void treeMapExample() {
+    private void listTreeMap() {
         TreeMap<Integer, String> treeMap = new TreeMap<>();
         treeMap.put(1, "Data1");
         treeMap.put(23, "Data2");
