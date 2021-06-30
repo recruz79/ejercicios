@@ -47,8 +47,6 @@ public class Postfix {
                 } else {
                     s.push(num1 / num2);
                 }
-
-                //  "+", "-", "*", "/"
             }
         }
         return s.pop();
