@@ -2,9 +2,9 @@ package com.recs.ejercicios.collections;
 
 import java.util.*;
 
-public class CollectionsTutorial {
+public class ListExamples {
 
-    public void listMergedArrays(Integer[] arrayOne, Integer[] arrayTwo) {
+    public Set listMergedArrays(Integer[] arrayOne, Integer[] arrayTwo) {
         System.out.println("Array a : " + Arrays.toString(arrayOne));
         System.out.println("Array b : " + Arrays.toString(arrayTwo));
 
@@ -12,6 +12,7 @@ public class CollectionsTutorial {
         orderedArray.addAll(Arrays.asList(arrayOne));
         orderedArray.addAll(Arrays.asList(arrayTwo));
         System.out.println("The result arrays is : " + orderedArray.toString());
+        return orderedArray;
     }
 
     private void listAggregation() {
