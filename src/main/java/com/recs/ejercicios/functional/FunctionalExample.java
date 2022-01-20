@@ -1,7 +1,5 @@
 package com.recs.ejercicios.functional;
 
-import com.recs.model.Person;
-
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -11,12 +9,10 @@ import java.util.stream.IntStream;
  */
 public class FunctionalExample {
 
-    // Iteramos una lista del 1 al 100 y la imprimimos
     protected void iterateListForEach() {
         IntStream.range(1, 100).forEach(System.out::print);
     }
 
-    // Creamos una lista de numeros y la asignamos a un List
     protected void createNumbersList() {
         List<Integer> result = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
         int total = 0;
@@ -42,17 +38,19 @@ public class FunctionalExample {
         return list;
     }
 
-    protected List<Integer> removePairNumbersFromStream(List<Integer> list) {
+    protected List<Integer> removeNumbersFromStream(List<Integer> list) {
         List<Integer> result = list.stream().filter(item -> item < 10 || item > 80).collect(Collectors.toList());
         return result;
     }
 
-    protected void ordenasListaPersonas() {
+    protected void ordenarListaPersonas() {
         List<PersonModel> listaPersonas = ExampleData.getPersons();
         listaPersonas.sort((p1, p2) -> p1.getAge().compareTo(p2.getAge()));
         for(PersonModel person : listaPersonas) {
             System.out.println(person);
         }
+
+        listaPersonas.stream().map(PersonModel::getName).forEach(System.out::println);
     }
 
     protected void filtarPersonasMenoresDeEdad() {
@@ -73,5 +71,6 @@ public class FunctionalExample {
                 System.out.println(personModel);
             }
         }
+
     }
 }

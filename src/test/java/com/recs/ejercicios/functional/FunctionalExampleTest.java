@@ -35,14 +35,14 @@ class FunctionalExampleTest {
     public void removeNumbersFromStream() {
         List<Integer> list = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
         System.out.println("Total size list: " + list.size());
-        List<Integer> result = functionalExample.removePairNumbersFromStream(list);
+        List<Integer> result = functionalExample.removeNumbersFromStream(list);
         System.out.println("Total size list after cleaning: " + result.size());
         assertThat(result.size()).isEqualTo(29);
     }
 
     @Test
     public void compararPersona() {
-        functionalExample.ordenasListaPersonas();
+        functionalExample.ordenarListaPersonas();
     }
 
     @Test
