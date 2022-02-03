@@ -5,17 +5,18 @@ public class PersonModel {
     String name;
     Integer age;
     String document;
-    String genero;
+    String gender;
 
     public PersonModel(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public PersonModel(String name, int age, String genero) {
+    public PersonModel(String name, int age, String genero, String document) {
         this.name = name;
         this.age = age;
-        this.genero = genero;
+        this.gender = genero;
+        this.document = document;
     }
 
     public String getName() {
@@ -42,8 +43,8 @@ public class PersonModel {
         this.document = document;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getGender() {
+        return gender;
     }
 
     @Override

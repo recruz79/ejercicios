@@ -54,4 +54,19 @@ class FunctionalExampleTest {
     public void filtrarPersonasPorMayoresFemenino() {
         functionalExample.filtrarPersonasPorMayoresFemenino();
     }
+
+    @Test
+    public void findPersonByName() {
+        functionalExample.findPersonByName("rosalia");
+    }
+
+    @Test
+    public void findPersonByDocument() {
+        functionalExample.findPersonByDocument("123456");
+    }
+
+    @Test
+    public void findPersonByDocumentAngeGender() {
+        functionalExample.findPersonByDocumentAngeGender("1234567", "masculino");
+    }
 }
