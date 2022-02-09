@@ -44,4 +44,14 @@ public class StreamExampleTest {
     public void filtrarPersonasMenoresDeEdad() {
         streamExample.filtarPersonasMenoresDeEdad();
     }
+
+    @Test
+    public void findFirstMatchingPerson() {
+        streamExample.findFirstMatchingPerson();
+    }
+
+    @Test
+    public void findFirstAnyMatchingPerson() {
+        streamExample.findFirstAnyMatchingPerson();
+    }
 }

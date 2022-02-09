@@ -12,6 +12,7 @@ public class FunctionalExample {
         IntStream.range(1, 100).forEach(System.out::print);
     }
 
+    @FunctionalInterface
     interface PersonFilter {
         boolean accept(PersonModel personModel);
     }

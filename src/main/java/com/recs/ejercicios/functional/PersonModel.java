@@ -5,14 +5,14 @@ public class PersonModel {
     String name;
     Integer age;
     String document;
-    String gender;
+    GenderType gender;
 
     public PersonModel(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public PersonModel(String name, int age, String genero, String document) {
+    public PersonModel(String name, int age, GenderType genero, String document) {
         this.name = name;
         this.age = age;
         this.gender = genero;
@@ -43,7 +43,7 @@ public class PersonModel {
         this.document = document;
     }
 
-    public String getGender() {
+    public GenderType getGender() {
         return gender;
     }
 
