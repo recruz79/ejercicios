@@ -1,5 +1,10 @@
-package com.recs.ejercicios.functional;
+package com.recs.ejercicios.functional.streams;
 
+import com.recs.ejercicios.functional.ExampleData;
+import com.recs.ejercicios.functional.GenderType;
+import com.recs.ejercicios.functional.PersonModel;
+
+import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -83,6 +88,24 @@ public class StreamExample {
                 .anyMatch(person -> person.getGender() == GenderType.MASCULINO);
 
         System.out.println("Person found? " + personFound);
+    }
+
+    protected void streamBuilderExample() {
+        Stream<UUID> uuids = Stream.generate(UUID::randomUUID);
+        uuids.limit(10).forEach(System.out::println);
+
+        Stream<BigInteger> powerOfTwo = Stream.iterate(BigInteger.ONE, n -> n.multiply(BigInteger.TWO));
+        powerOfTwo.limit(20).forEach(System.out::println);
+
+        Stream<Character> alphabet = Stream.iterate('A', letter -> letter <= 'Z', letter -> (char) (letter +1));
+        alphabet.forEach(System.out::println);
+
+        Stream.Builder<String> builder = Stream.builder();
+        builder.add("one");
+        builder.add("two");
+        builder.add("three");
+        Stream<String> stream = builder.build();
+        stream.forEach(System.out::println);
     }
 
 }

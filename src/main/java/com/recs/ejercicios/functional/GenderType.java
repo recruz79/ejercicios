@@ -1,5 +1,5 @@
 package com.recs.ejercicios.functional;
 
-enum GenderType {
+public enum GenderType {
     FEMENINO(), MASCULINO;
 }

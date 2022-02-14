@@ -1,4 +1,4 @@
-package com.recs.ejercicios.functional;
+package com.recs.ejercicios.functional.streams;
 
 import org.junit.jupiter.api.Test;
 
@@ -53,5 +53,10 @@ public class StreamExampleTest {
     @Test
     public void findFirstAnyMatchingPerson() {
         streamExample.findFirstAnyMatchingPerson();
+    }
+
+    @Test
+    public void testStreamBuilderExample() {
+        streamExample.streamBuilderExample();
     }
 }
