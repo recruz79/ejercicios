@@ -2,9 +2,9 @@ package com.recs.ejercicios.functional.streams;
 
 import org.junit.jupiter.api.Test;
 
-public class StreamReduceTest {
+public class StreamCollectorsTest {
 
-    StreamReduce streamReduce = new StreamReduce();
+    StreamCollectors streamReduce = new StreamCollectors();
 
     @Test
     public void testStreamReduceExample() {
@@ -13,7 +13,12 @@ public class StreamReduceTest {
 
     @Test
     public void testStreamReduceVsCollectExample() {
-        streamReduce.reduceCollectDifferenceExample();
+        streamReduce.reduceCollectPersonNamesExample();
+    }
+
+    @Test
+    public void testStreamReduceAccumulator() {
+        streamReduce.reduceAccumulator();
     }
 
 }
