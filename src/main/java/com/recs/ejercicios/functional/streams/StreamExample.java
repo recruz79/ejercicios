@@ -36,22 +36,15 @@ public class StreamExample {
         System.out.println("The sum of Range 1 to 100 is: " + total);
     }
 
-    protected void sumIntegerStream() {
-        System.out.println("The sum of Range 1 to 100 is: " + IntStream.rangeClosed(1, 100).sum());
+    protected void sumIntegerStream(int from, int to) {
+        System.out.println("The sum of Range 1 to 100 is: " + IntStream.rangeClosed(from, to).sum());
     }
 
-    protected List<Integer> removeNumbersFromList(List<Integer> list) {
-        Iterator it = list.iterator();
-        while (it.hasNext()) {
-            Integer item = (Integer) it.next();
-            if (item < 10 || item > 80) {
-                it.remove();
-            }
-        }
-        return list;
+    protected List<Integer> getListOfNumberFromTo(int from, int to) {
+        return IntStream.rangeClosed(from, to).boxed().collect(Collectors.toList());
     }
 
-    protected List<Integer> removeNumbersFromStream(List<Integer> list) {
+    protected List<Integer> removeNumbersFromListStream(List<Integer> list) {
         return list.stream().filter(item -> item < 10 || item > 80).collect(Collectors.toList());
     }
 

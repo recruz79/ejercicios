@@ -90,4 +90,15 @@ public class ListExamples {
         }
     }
 
+    protected List<Integer> removeNumbersFromList(List<Integer> list) {
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            Integer item = (Integer) it.next();
+            if (item < 10 || item > 80) {
+                it.remove();
+            }
+        }
+        return list;
+    }
+
 }

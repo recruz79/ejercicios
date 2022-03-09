@@ -20,23 +20,20 @@ public class StreamExampleTest {
 
     @Test
     public void testSumIntegerStream() {
-        streamExample.sumIntegerStream();
+        streamExample.sumIntegerStream(10, 100);
     }
 
     @Test
-    public void testRemoveNumbersFromList() {
-        List<Integer> list = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
-        System.out.println("Total size list: " + list.size());
-        List<Integer> result = streamExample.removeNumbersFromList(list);
-        System.out.println("Total size list after cleaning: " + result.size());
-        assertThat(result.size()).isEqualTo(71);
+    public void testGetListOfNumberFromTo() {
+        List<Integer> result = streamExample.getListOfNumberFromTo(150, 190);
+        System.out.println(result);
     }
 
     @Test
     public void testRemoveNumbersFromStream() {
         List<Integer> list = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
         System.out.println("Total size list: " + list.size());
-        List<Integer> result = streamExample.removeNumbersFromStream(list);
+        List<Integer> result = streamExample.removeNumbersFromListStream(list);
         System.out.println("Total size list after cleaning: " + result.size());
         assertThat(result.size()).isEqualTo(29);
     }
