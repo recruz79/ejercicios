@@ -13,21 +13,21 @@ class FunctionalExampleTest {
 
     @Test
     public void filtrarPersonasPorMayoresFemenino() {
-        functionalExample.filtrarPersonasPorMayoresFemenino();
+        functionalExample.filtrarPersonasPorMayoresFemenino(ExampleData.getPersons());
     }
 
     @Test
     public void findPersonByName() {
-        functionalExample.findPersonByName("rosalia");
+        functionalExample.findPersonByName("rosalia", ExampleData.getPersons());
     }
 
     @Test
     public void findPersonByDocument() {
-        functionalExample.findPersonByDocument("123456");
+        functionalExample.findPersonByDocument("123456", ExampleData.getPersons());
     }
 
     @Test
     public void findPersonByDocumentAngeGender() {
-        functionalExample.findPersonByDocumentAngeGender("1234567", "masculino");
+        functionalExample.findPersonByDocumentAngeGender("1234567", "masculino", ExampleData.getPersons());
     }
 }

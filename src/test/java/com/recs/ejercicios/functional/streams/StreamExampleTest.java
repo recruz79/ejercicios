@@ -1,5 +1,6 @@
 package com.recs.ejercicios.functional.streams;
 
+import com.recs.ejercicios.functional.ExampleData;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -18,7 +19,12 @@ public class StreamExampleTest {
     }
 
     @Test
-    public void removeNumbersFromList() {
+    public void testSumIntegerStream() {
+        streamExample.sumIntegerStream();
+    }
+
+    @Test
+    public void testRemoveNumbersFromList() {
         List<Integer> list = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
         System.out.println("Total size list: " + list.size());
         List<Integer> result = streamExample.removeNumbersFromList(list);
@@ -27,7 +33,7 @@ public class StreamExampleTest {
     }
 
     @Test
-    public void removeNumbersFromStream() {
+    public void testRemoveNumbersFromStream() {
         List<Integer> list = IntStream.rangeClosed(1, 100).boxed().collect(Collectors.toList());
         System.out.println("Total size list: " + list.size());
         List<Integer> result = streamExample.removeNumbersFromStream(list);
@@ -36,23 +42,23 @@ public class StreamExampleTest {
     }
 
     @Test
-    public void compararPersona() {
-        streamExample.ordenarListaPersonas();
+    public void testCompararPersona() {
+        streamExample.ordenarListaPersonas(ExampleData.getPersons());
     }
 
     @Test
-    public void filtrarPersonasMenoresDeEdad() {
-        streamExample.filtarPersonasMenoresDeEdad();
+    public void testFiltrarPersonasMenoresDeEdad() {
+        streamExample.filtarPersonasMenoresDeEdad(ExampleData.getPersons());
     }
 
     @Test
-    public void findFirstMatchingPerson() {
-        streamExample.findFirstMatchingPerson();
+    public void testFindFirstMatchingPerson() {
+        streamExample.findFirstMatchingPerson(ExampleData.getPersons());
     }
 
     @Test
-    public void findFirstAnyMatchingPerson() {
-        streamExample.findFirstAnyMatchingPerson();
+    public void testFindFirstAnyMatchingPerson() {
+        streamExample.findFirstAnyMatchingPerson(ExampleData.getPersons());
     }
 
     @Test

@@ -17,8 +17,7 @@ public class FunctionalExample {
         boolean accept(PersonModel personModel);
     }
 
-    protected void filtrarPersonasPorMayoresFemenino() {
-        List<PersonModel> listaPersonas = ExampleData.getPersons();
+    protected void filtrarPersonasPorMayoresFemenino(List<PersonModel> listaPersonas) {
         PersonFilter personFilter = personModel -> personModel.getAge() > 18 && personModel.getGender().equals("femenino");
 
         for (PersonModel personModel : listaPersonas) {
@@ -38,8 +37,7 @@ public class FunctionalExample {
         return Optional.empty();
     }
 
-    protected void findPersonByName(String name) {
-        List<PersonModel> listaPersonas = ExampleData.getPersons();
+    protected void findPersonByName(String name, List<PersonModel> listaPersonas) {
         findPerson(listaPersonas, personModel -> personModel.getName().equals(name))
                 .map(PersonModel::getAge)
                 .map(age -> String.format("We found the person: %s, and is %d old years", name, age))
@@ -49,9 +47,7 @@ public class FunctionalExample {
                 );
     }
 
-    protected void findPersonByDocument(String document) {
-        List<PersonModel> listaPersonas = ExampleData.getPersons();
-
+    protected void findPersonByDocument(String document, List<PersonModel> listaPersonas) {
         Function<PersonModel, Integer> personToAge = PersonModel::getAge;
         Function<Integer, String> AgeToMessage = age -> String.format("We found the document: %s, and is %d old years", document, age);
         Function<PersonModel, String> personToMessage = personToAge.andThen(AgeToMessage);
@@ -64,9 +60,7 @@ public class FunctionalExample {
                 );
     }
 
-    protected void findPersonByDocumentAngeGender(String document, String gender) {
-        List<PersonModel> listaPersonas = ExampleData.getPersons();
-
+    protected void findPersonByDocumentAngeGender(String document, String gender, List<PersonModel> listaPersonas) {
         Predicate<PersonModel> isGender = p1 -> p1.getGender().equals(gender);
         Predicate<PersonModel> isDocument = p1 -> p1.getDocument().equals(document);
 

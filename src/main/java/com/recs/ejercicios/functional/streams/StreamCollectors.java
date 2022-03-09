@@ -1,6 +1,5 @@
 package com.recs.ejercicios.functional.streams;
 
-import com.recs.ejercicios.functional.ExampleData;
 import com.recs.ejercicios.functional.PersonModel;
 
 import java.util.ArrayList;
@@ -9,9 +8,7 @@ import java.util.Optional;
 
 public class StreamCollectors {
 
-    protected void reduceStreamExample() {
-        List<PersonModel> persons = ExampleData.getPersons();
-
+    protected void reduceStreamExample(List<PersonModel> persons) {
         Optional<Integer> opt = persons.stream()
                 .map(PersonModel::getAge)
                 .reduce(Integer::sum);
@@ -30,9 +27,7 @@ public class StreamCollectors {
 
     }
 
-    protected void reduceCollectPersonNamesExample() {
-        List<PersonModel> persons = ExampleData.getPersons();
-
+    protected void reduceCollectPersonNamesExample(List<PersonModel> persons) {
         List<String> reducedPersonsNames = persons.parallelStream().reduce(
                 new ArrayList(),
                 (list, person) -> {
@@ -56,9 +51,7 @@ public class StreamCollectors {
         System.out.println("MUTABLE List of names are: " + collectedPersonsNames);
     }
 
-    protected void reduceAccumulator() {
-        List<PersonModel> persons = ExampleData.getPersons();
-
+    protected void reduceAccumulator(List<PersonModel> persons) {
         Integer agesAccumulator = persons
                 .parallelStream()
                 .reduce(0,

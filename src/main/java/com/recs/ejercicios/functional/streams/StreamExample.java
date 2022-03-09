@@ -1,6 +1,5 @@
 package com.recs.ejercicios.functional.streams;
 
-import com.recs.ejercicios.functional.ExampleData;
 import com.recs.ejercicios.functional.GenderType;
 import com.recs.ejercicios.functional.PersonModel;
 
@@ -12,8 +11,7 @@ import java.util.stream.Stream;
 
 public class StreamExample {
 
-    protected void checkStreamsCreation() {
-        List<PersonModel> persons = ExampleData.getPersons();
+    protected void checkStreamsCreation(List<PersonModel> persons) {
         Stream<PersonModel> stream1 = persons.stream();
 
         String[] array = new String[]{"one", "two", "three"};
@@ -57,8 +55,7 @@ public class StreamExample {
         return list.stream().filter(item -> item < 10 || item > 80).collect(Collectors.toList());
     }
 
-    protected void ordenarListaPersonas() {
-        List<PersonModel> listaPersonas = ExampleData.getPersons();
+    protected void ordenarListaPersonas(List<PersonModel> listaPersonas) {
         listaPersonas.sort((p1, p2) -> p1.getAge().compareTo(p2.getAge()));
         for (PersonModel person : listaPersonas) {
             System.out.println(person);
@@ -67,23 +64,18 @@ public class StreamExample {
         listaPersonas.stream().map(PersonModel::getName).forEach(System.out::println);
     }
 
-    protected void filtarPersonasMenoresDeEdad() {
-        List<PersonModel> listaPersonas = ExampleData.getPersons();
-        listaPersonas.stream().filter(p1 -> (p1.getAge() < 18)).forEach(p1 -> System.out.println(p1.getAge()));
+    protected void filtarPersonasMenoresDeEdad(List<PersonModel> persons) {
+        persons.stream().filter(p1 -> (p1.getAge() < 18)).forEach(p1 -> System.out.println(p1.getAge()));
     }
 
-    protected void findFirstMatchingPerson() {
-        List<PersonModel> persons = ExampleData.getPersons();
-
+    protected void findFirstMatchingPerson(List<PersonModel> persons) {
         Optional<PersonModel> opt = persons.stream()
                 .filter(person -> person.getGender() == GenderType.FEMENINO)
                 .findFirst();
         opt.ifPresent(System.out::println);
     }
 
-    protected void findFirstAnyMatchingPerson() {
-        List<PersonModel> persons = ExampleData.getPersons();
-
+    protected void findFirstAnyMatchingPerson(List<PersonModel> persons) {
         boolean personFound = persons.stream()
                 .anyMatch(person -> person.getGender() == GenderType.MASCULINO);
 

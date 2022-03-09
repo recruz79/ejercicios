@@ -1,5 +1,6 @@
 package com.recs.ejercicios.functional.streams;
 
+import com.recs.ejercicios.functional.ExampleData;
 import org.junit.jupiter.api.Test;
 
 public class StreamCollectorsTest {
@@ -8,17 +9,17 @@ public class StreamCollectorsTest {
 
     @Test
     public void testStreamReduceExample() {
-        streamReduce.reduceStreamExample();
+        streamReduce.reduceStreamExample(ExampleData.getPersons());
     }
 
     @Test
     public void testStreamReduceVsCollectExample() {
-        streamReduce.reduceCollectPersonNamesExample();
+        streamReduce.reduceCollectPersonNamesExample(ExampleData.getPersons());
     }
 
     @Test
     public void testStreamReduceAccumulator() {
-        streamReduce.reduceAccumulator();
+        streamReduce.reduceAccumulator(ExampleData.getPersons());
     }
 
 }
