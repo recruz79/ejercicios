@@ -1,4 +1,4 @@
-package com.recs.ejercicios.complexity;
+package com.recs.ejercicios.algorithms.complexity;
 
 public class Complexity {
 

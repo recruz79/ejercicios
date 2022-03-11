@@ -1,9 +1,9 @@
 package com.recs.tutorial.streams;
 
 
-import com.recs.model.Bar;
-import com.recs.model.Foo;
-import com.recs.model.Person;
+import com.recs.tutorial.model.Bar;
+import com.recs.tutorial.model.Foo;
+import com.recs.tutorial.model.Person;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package com.recs.model;
+package com.recs.tutorial.model;
 
 public class Person {
 

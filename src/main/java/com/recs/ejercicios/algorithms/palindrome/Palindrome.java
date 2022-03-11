@@ -1,4 +1,4 @@
-package com.recs.ejercicios.palindrome;
+package com.recs.ejercicios.algorithms.palindrome;
 
 import java.util.HashSet;
 import java.util.Set;

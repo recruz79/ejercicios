@@ -82,7 +82,7 @@ public class StreamExample {
         Stream<BigInteger> powerOfTwo = Stream.iterate(BigInteger.ONE, n -> n.multiply(BigInteger.TWO));
         powerOfTwo.limit(20).forEach(System.out::println);
 
-        Stream<Character> alphabet = Stream.iterate('A', letter -> letter <= 'Z', letter -> (char) (letter +1));
+        Stream<Character> alphabet = Stream.iterate('A', letter -> letter <= 'Z', letter -> (char) (letter + 1));
         alphabet.forEach(System.out::println);
 
         Stream.Builder<String> builder = Stream.builder();
@@ -91,6 +91,14 @@ public class StreamExample {
         builder.add("three");
         Stream<String> stream = builder.build();
         stream.forEach(System.out::println);
+    }
+
+    public Map<String, Long> countWordsByFirstLetter(List<String> wordList) {
+        return wordList.stream().map(p -> p.toLowerCase()).collect(Collectors.groupingBy(s -> String.valueOf(s.charAt(0)), Collectors.counting()));
+    }
+
+    public Map<String, List<String>> orderWordsByGroup(List<String> wordList) {
+        return wordList.stream().map(String::toLowerCase).collect(Collectors.groupingBy(s -> String.valueOf(s.charAt(0))));
     }
 
 }

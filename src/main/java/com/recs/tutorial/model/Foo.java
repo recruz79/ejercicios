@@ -1,4 +1,4 @@
-package com.recs.model;
+package com.recs.tutorial.model;
 
 import java.util.ArrayList;
 import java.util.List;

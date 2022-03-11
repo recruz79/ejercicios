@@ -3,6 +3,8 @@ package com.recs.ejercicios.functional.streams;
 import com.recs.ejercicios.functional.ExampleData;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -61,5 +63,19 @@ public class StreamExampleTest {
     @Test
     public void testStreamBuilderExample() {
         streamExample.streamBuilderExample();
+    }
+
+    @Test
+    public void testOrderWordsByGroup() {
+        String text = "hello how are you hello is are are you fine s";
+        List<String>  wordList = Arrays.asList(text.split(" "));
+        System.out.println(streamExample.orderWordsByGroup(wordList));
+    }
+
+    @Test
+    public void testCountWordsByFirstLetter() {
+        String text = "hello how are you hello is are are you fine s";
+        List<String> wordList = Arrays.asList(text.split(" "));
+        System.out.println(streamExample.countWordsByFirstLetter(wordList));
     }
 }
