@@ -9,13 +9,13 @@ Creational ->
     builder ->
 
     factory ->
-        abstract factory ->
+        
+    abstract factory ->
 
     singleton ->
 
     prototype ->
 
-    dependency injection  ->
 
 Structural ->
 
